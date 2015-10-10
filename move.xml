@@ -14,7 +14,7 @@
             <field name="OP">LAND</field>
             <value name="A">
               <block type="logic_compare" id="5" inline="true">
-                <field name="OP">LTE</field>
+                <field name="OP">LT</field>
                 <value name="A">
                   <block type="sensor_object" id="6">
                     <field name="OBJECT">LEFTFRONT</field>
@@ -22,14 +22,14 @@
                 </value>
                 <value name="B">
                   <block type="math_number" id="7">
-                    <field name="NUM">25</field>
+                    <field name="NUM">75</field>
                   </block>
                 </value>
               </block>
             </value>
             <value name="B">
               <block type="logic_compare" id="8" inline="true">
-                <field name="OP">GTE</field>
+                <field name="OP">GT</field>
                 <value name="A">
                   <block type="sensor_object" id="9">
                     <field name="OBJECT">RIGHTFRONT</field>
@@ -62,7 +62,7 @@
             <field name="OP">LAND</field>
             <value name="A">
               <block type="logic_compare" id="15" inline="true">
-                <field name="OP">LTE</field>
+                <field name="OP">LT</field>
                 <value name="A">
                   <block type="sensor_object" id="16">
                     <field name="OBJECT">RIGHTFRONT</field>
@@ -70,14 +70,14 @@
                 </value>
                 <value name="B">
                   <block type="math_number" id="17">
-                    <field name="NUM">25</field>
+                    <field name="NUM">75</field>
                   </block>
                 </value>
               </block>
             </value>
             <value name="B">
               <block type="logic_compare" id="18" inline="true">
-                <field name="OP">GTE</field>
+                <field name="OP">GT</field>
                 <value name="A">
                   <block type="sensor_object" id="19">
                     <field name="OBJECT">LEFTFRONT</field>
@@ -110,7 +110,7 @@
             <field name="OP">LAND</field>
             <value name="A">
               <block type="logic_compare" id="25" inline="true">
-                <field name="OP">LTE</field>
+                <field name="OP">LT</field>
                 <value name="A">
                   <block type="sensor_object" id="26">
                     <field name="OBJECT">LEFTFRONT</field>
@@ -118,14 +118,14 @@
                 </value>
                 <value name="B">
                   <block type="math_number" id="27">
-                    <field name="NUM">25</field>
+                    <field name="NUM">75</field>
                   </block>
                 </value>
               </block>
             </value>
             <value name="B">
               <block type="logic_compare" id="28" inline="true">
-                <field name="OP">LTE</field>
+                <field name="OP">LT</field>
                 <value name="A">
                   <block type="sensor_object" id="29">
                     <field name="OBJECT">RIGHTFRONT</field>
@@ -133,7 +133,7 @@
                 </value>
                 <value name="B">
                   <block type="math_number" id="30">
-                    <field name="NUM">25</field>
+                    <field name="NUM">75</field>
                   </block>
                 </value>
               </block>
@@ -145,7 +145,7 @@
             <field name="MODE">UNTIL</field>
             <value name="NUMBER">
               <block type="logic_compare" id="32" inline="true">
-                <field name="OP">LTE</field>
+                <field name="OP">LT</field>
                 <value name="A">
                   <block type="sensor_object" id="33">
                     <field name="OBJECT">REAR</field>
@@ -153,7 +153,7 @@
                 </value>
                 <value name="B">
                   <block type="math_number" id="34">
-                    <field name="NUM">25</field>
+                    <field name="NUM">75</field>
                   </block>
                 </value>
               </block>
