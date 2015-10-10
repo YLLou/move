@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="16" inline="false" x="201" y="-40">
+  <block type="controls_whileUntil" id="16" inline="false" x="312" y="38">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="55">
@@ -8,18 +8,38 @@
     </value>
     <statement name="DO">
       <block type="controls_if" id="37" inline="false">
-        <mutation elseif="1" else="1"></mutation>
+        <mutation elseif="2" else="1"></mutation>
         <value name="IF0">
-          <block type="logic_compare" id="62" inline="true">
-            <field name="OP">LTE</field>
+          <block type="logic_operation" id="292" inline="true">
+            <field name="OP">LAND</field>
             <value name="A">
-              <block type="sensor_object" id="69">
-                <field name="OBJECT">LEFTFRONT</field>
+              <block type="logic_compare" id="62" inline="true">
+                <field name="OP">LTE</field>
+                <value name="A">
+                  <block type="sensor_object" id="69">
+                    <field name="OBJECT">LEFTFRONT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="79">
+                    <field name="NUM">25</field>
+                  </block>
+                </value>
               </block>
             </value>
             <value name="B">
-              <block type="math_number" id="79">
-                <field name="NUM">75</field>
+              <block type="logic_compare" id="299" inline="true">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <block type="sensor_object" id="320">
+                    <field name="OBJECT">RIGHTFRONT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="313">
+                    <field name="NUM">75</field>
+                  </block>
+                </value>
               </block>
             </value>
           </block>
@@ -38,16 +58,36 @@
           </block>
         </statement>
         <value name="IF1">
-          <block type="logic_compare" id="122" inline="true">
-            <field name="OP">LTE</field>
+          <block type="logic_operation" id="285" inline="true">
+            <field name="OP">LAND</field>
             <value name="A">
-              <block type="sensor_object" id="137">
-                <field name="OBJECT">RIGHTFRONT</field>
+              <block type="logic_compare" id="271" inline="true">
+                <field name="OP">LTE</field>
+                <value name="A">
+                  <block type="sensor_object" id="137">
+                    <field name="OBJECT">RIGHTFRONT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="334">
+                    <field name="NUM">25</field>
+                  </block>
+                </value>
               </block>
             </value>
             <value name="B">
-              <block type="math_number" id="144">
-                <field name="NUM">75</field>
+              <block type="logic_compare" id="327" inline="true">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <block type="sensor_object" id="341">
+                    <field name="OBJECT">LEFTFRONT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="348">
+                    <field name="NUM">75</field>
+                  </block>
+                </value>
               </block>
             </value>
           </block>
@@ -63,6 +103,74 @@
             <next>
               <block type="movement_left" id="105"></block>
             </next>
+          </block>
+        </statement>
+        <value name="IF2">
+          <block type="logic_operation" id="371" inline="true">
+            <field name="OP">LAND</field>
+            <value name="A">
+              <block type="logic_compare" id="122" inline="true">
+                <field name="OP">LTE</field>
+                <value name="A">
+                  <block type="sensor_object" id="385">
+                    <field name="OBJECT">LEFTFRONT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="144">
+                    <field name="NUM">25</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_compare" id="378" inline="true">
+                <field name="OP">LTE</field>
+                <value name="A">
+                  <block type="sensor_object" id="392">
+                    <field name="OBJECT">RIGHTFRONT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="399">
+                    <field name="NUM">25</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="controls_whileUntil" id="423" inline="false">
+            <field name="MODE">WHILE</field>
+            <value name="NUMBER">
+              <block type="logic_compare" id="430" inline="true">
+                <field name="OP">LTE</field>
+                <value name="A">
+                  <block type="sensor_object" id="278">
+                    <field name="OBJECT">REAR</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="437">
+                    <field name="NUM">25</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="led_select" id="357" inline="true">
+                <field name="ACTION">FLASH</field>
+                <value name="LED">
+                  <block type="math_number" id="364">
+                    <field name="NUM">3</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="movement_reverse" id="409"></block>
+                </next>
+              </block>
+            </statement>
           </block>
         </statement>
         <statement name="ELSE">
