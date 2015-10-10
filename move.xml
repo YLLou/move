@@ -1,6 +1,6 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <block type="controls_whileUntil" id="16" inline="false" x="201" y="-40">
-    <field name="MODE">WHILE</field>
+    <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="55">
         <field name="OBJECT">ENTER</field>
@@ -55,6 +55,11 @@
         <statement name="DO1">
           <block type="led_select" id="223" inline="true">
             <field name="ACTION">ON</field>
+            <value name="LED">
+              <block type="math_number" id="257">
+                <field name="NUM">5</field>
+              </block>
+            </value>
             <next>
               <block type="movement_left" id="105"></block>
             </next>
